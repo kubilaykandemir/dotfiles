@@ -39,7 +39,7 @@ client.background       #F8F8F2
 # bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
 
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -345,7 +345,6 @@ bindsym $mod+shift+x exec i3lock --color "#282A36"
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-exec_always feh --bg-scale $HOME/Pictures/Wallpapers/arch_street.png
 exec --no-startup-id numlockx off
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
