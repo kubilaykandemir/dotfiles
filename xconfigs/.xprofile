@@ -1,3 +1,11 @@
+# Place my monitor to right of my laptop screen and set resolution
+xrandr --auto --output HDMI2 --mode 1920x1080 --right-of eDP1
+
+# Don't Randomly Turn off
+xset s off
+xset -dpms
+xset s noblank
+
 # Speedy keys
 xset r rate 210 40
 
@@ -5,16 +13,46 @@ xset r rate 210 40
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
-
-# Hide mouse when typing
-xbanish &
+jj
 
 # XDG Paths
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
+# Wallpaper restore
+nitrogen --restore &
+
+# Systray
+# trayer --expand true --widthtype request --transparent true --alpha 255 --edge top --align right &
+
+# dwmblocks
+dwmblocks &
+
+# Hide mouse when typing
+xbanish &
+
+# wifi
+nm-applet &
+
+# Systray volume icon
+volumeicon &
+
+# Power Management
+xfce4-power-manager &
+
 # zsh config dir
 export ZDOTDIR=$HOME/.config/zsh
 
+# Some programs like Gparted and etcher usb flashing requires some authentication
+# agent to run at background.
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# activate numlock
+numlockx &
+
+# Run Compton
+picom --config "$HOME/.config/picom/picom.conf" &
+
+# load Xresources
 xrdb ~/.Xresources

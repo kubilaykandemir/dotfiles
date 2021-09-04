@@ -188,6 +188,10 @@ keys = [
         "XF86MonBrightnessDown",
         lazy.spawn("xbacklight -dec 10"),
         desc="Decrease Brightness By 10"),
+    Key([mod],
+        "p",
+        lazy.spawn("passmenu"),
+        desc="Runs passmenu to access my password"),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -335,7 +339,7 @@ def init_widgets_list():
             background=colors[0],
             padding=None,
         ),
-        widget.Systray(background=colors[0], padding=5),
+        # widget.Systray(background=colors[0], padding=5),
         widget.Sep(linewidth=0,
                    padding=6,
                    foreground=colors[0],
