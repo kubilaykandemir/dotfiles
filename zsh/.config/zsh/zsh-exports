@@ -1,17 +1,21 @@
 #!/usr/bin/sh
-HISTFILE="$XDG_DATA_HOME"/zsh/history
+# HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/myscripts:$PATH"
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
-# export PATH=$HOME/.local/share/go/bin:$PATH
-# export GOPATH=$HOME/.local/share/go
-# export PATH=$HOME/.miniconda/bin:$PATH
-export npm_config_prefix=~/.node_modules
-export PATH="$HOME/.node_modules/bin:$PATH"
+export PATH=$HOME/.local/bin/fnm:$PATH
+export PATH=$HOME/.local/share/go/bin:$PATH
+export GOPATH=$HOME/.local/share/go
+export PATH=$HOME/.miniconda/bin:$PATH
+export npm_config_prefix="$HOME/.local/.node_modules"
+export PATH="$HOME/.local/.node_modules/bin:$PATH"
+export DENO_INSTALL="$HOME/.local/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"

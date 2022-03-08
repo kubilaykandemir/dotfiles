@@ -42,8 +42,7 @@ alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate ar
 alias list_systemctl="systemctl list-unit-files --state=enabled"
 
 # brightness
-alias brightness="$HOME/Scripts/brightness.sh"
-alias cat="bat"
+# alias setbrightness="$HOME/scripts/brightness.sh"
 
 # vifm scrips
 alias vifmimg="$HOME/.config/vifm/scripts/vifmimg"
@@ -59,7 +58,7 @@ case "$(uname -s)" in
      ;;
 
    Linux)
-	alias ls='exa --group-directories-first --color=auto --icons' 
+	alias ls='ls --group-directories-first --color=auto' 
      ;;
 
    CYGWIN*|MINGW32*|MSYS*|MINGW*)

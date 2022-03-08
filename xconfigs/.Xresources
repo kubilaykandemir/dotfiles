@@ -1,0 +1,168 @@
+! Dracula Xresources palette
+! spring wood
+*.foreground: #F8F8F2 
+! Charade
+*.background: #282A36
+
+! Black
+*.color0:     #000000
+! Tundora
+*.color8:     #4D4D4D
+
+! Persimmon
+*.color1:     #FF5555
+! Bittersweet
+*.color9:     #FF6E67
+
+! Screaming Green
+*.color2:     #50FA7B
+! Screaming Green
+*.color10:    #5AF78E
+
+! Honeysuckle
+*.color3:     #F1FA8C
+! Texas (Green)
+*.color11:    #F4F99D
+
+! Perfume (Purpleish)
+*.color4:     #BD93F9
+! Perfume (Grayish)
+*.color12:    #CAA9FA
+
+! Hot Pink
+*.color5:     #FF79C6
+! Carnation Pink
+*.color13:    #FF92D0
+
+! Anakiwa
+*.color6:     #8BE9FD
+! Anakiwa
+*.color14:    #9AEDFE
+
+! Silver
+*.color7:     #BFBFBF
+! Mercury
+*.color15:    #E6E6E6
+
+/* !       ██                  ██                                   ██      ██                  */
+/* !      ░██                 ░██                                  ░██     ░░                   */
+/* !      ░██  ██████   ██████░██  ██ ██████████   ██████    █████ ░██      ██ ███████   █████  */
+/* !   ██████ ░░░░░░██ ░░██░░█░██ ██ ░░██░░██░░██ ░░░░░░██  ██░░░██░██████ ░██░░██░░░██ ██░░░██ */
+/* !  ██░░░██  ███████  ░██ ░ ░████   ░██ ░██ ░██  ███████ ░██  ░░ ░██░░░██░██ ░██  ░██░███████ */
+/* ! ░██  ░██ ██░░░░██  ░██   ░██░██  ░██ ░██ ░██ ██░░░░██ ░██   ██░██  ░██░██ ░██  ░██░██░░░░  */
+/* ! ░░██████░░████████░███   ░██░░██ ███ ░██ ░██░░████████░░█████ ░██  ░██░██ ███  ░██░░██████ */
+/* !  ░░░░░░  ░░░░░░░░ ░░░    ░░  ░░ ░░░  ░░  ░░  ░░░░░░░░  ░░░░░  ░░   ░░ ░░ ░░░   ░░  ░░░░░░  */
+/* ! */
+/* ! special */
+/* *.foreground:   #c0c0c0 */
+/* *.background:   #121212 */
+/* *.cursorColor:  #c0c0c0 */
+
+/* ! black */
+/* *.color0:       #080808 */
+/* *.color8:       #36393f */
+
+/* ! red */
+/* *.color1:       #515978 */
+/* *.color9:       #778099 */
+
+/* ! green */
+/* *.color2:       #3ea28d */
+/* *.color10:      #71c4ba */
+
+/* ! yellow */
+/* *.color3:       #4dc5ce */
+/* *.color11:      #5e767f */
+
+/* ! blue */
+/* *.color4:       #6ea2a5 */
+/* *.color12:      #6abdc1 */
+
+/* ! magenta */
+/* *.color5:       #a8a8a8 */
+/* *.color13:      #4e4d80 */
+
+/* ! cyan */
+/* *.color6:       #558188 */
+/* *.color14:      #4fc8ce */
+
+/* ! white */
+/* *.color7:       #c0c0c0 */
+/* *.color15:      #a6a8aa */
+
+ 
+
+! These are all possible options, presented with default values.
+! xst will fallback to *.option if st.option is not present.
+! see src/config.h for more information about option meanings.
+
+! --- These options only take effect on startup. ---
+st.termname:     st-256color
+
+! Set to a non-zero value to disable window decorations (titlebar, etc) and go borderless.
+st.borderless:        0
+
+! --- The following options options can be reloaded via USR1 signal. ---
+st.font:              Hack Nerd Font:pixelsize=14:antialias=true:autohint=true;
+
+! window padding
+st.borderpx:          5
+
+! Available cursor values: 2 4 6 7 = █ _ | ☃ ( 1 3 5 are blinking versions)
+st.cursorshape:       2
+
+! thickness of underline and bar cursors
+st.cursorthickness:   2
+
+! 0: normal blinking, 1: leave cursor border and blink with cursors background
+st.cursorblinkstyle:  0
+
+! 0: cursor blinks with a constant interval; 1: blinking cycle resets on key input
+st.cursorblinkontype: 1
+
+st.disablebold:       0
+st.disableitalics:    0
+st.disableroman:      0
+
+! Amount of lines scrolled
+st.scrollrate:  1
+
+! Kerning / character bounding-box height multiplier
+st.chscale:           1.0
+
+! Kerning / character bounding-box width multiplier
+st.cwscale:           1.0
+
+! blinking timeout for terminal and cursor blinking (0 disables)
+st.blinktimeout:      800
+
+! bell volume. Value between -100 and 100. (0 disables)
+st.bellvolume:        100
+
+! 1: render most of the lines/blocks characters without using the font for
+! perfect alignment between cells (U2500 - U259F except dashes/diagonals).
+! Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
+! 0: disable (render all U25XX glyphs normally from the font).
+st.boxdraw: 0
+
+! (0|1) boxdraw(bold) enable toggle
+st.boxdraw_bold: 0
+
+! braille (U28XX):  1: render as adjacent "pixels",  0: use font
+st.boxdraw_braille: 0
+
+! set this to a non-zero value to force window depth
+st.depth: 0
+
+! opacity==255 means what terminal will be not transparent, 0 - fully transparent
+! (float values in range 0 to 1.0 may also be used)
+st.opacity:      255
+
+! (0|1) dont pre-multiply color values of the pixels when using transparency
+! (useful for the systems where composite manager not running all the time,
+! as color pre-multiplication will make the "opaque" colors look darker/lighter
+! without the composition)
+st.disable_alpha_correction: 0
+
+Xcursor.theme: Flatbed Cursor original White
+

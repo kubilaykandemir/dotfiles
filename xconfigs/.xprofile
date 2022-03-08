@@ -1,5 +1,7 @@
+#!/usr/bin/sh
 # Place my monitor to right of my laptop screen and set resolution
-xrandr --auto --output HDMI2 --mode 1920x1080 --right-of eDP1
+xrandr --auto --output eDP1 --mode 1920x1080 
+# xrandr --auto --output HDMI2 --mode 1920x1080 --right-of eDP1
 
 # Don't Randomly Turn off
 xset s off
@@ -7,18 +9,22 @@ xset -dpms
 xset s noblank
 
 # Speedy keys
-xset r rate 210 40
+# xset r rate 210 40
+xset r rate 600 25
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="st"
 export BROWSER="firefox"
-jj
 
 # XDG Paths
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
+export PATH="$HOME/.local/bin/statusbar:$PATH"
+
+# zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
 
 # Wallpaper restore
 nitrogen --restore &
@@ -26,23 +32,18 @@ nitrogen --restore &
 # Systray
 # trayer --expand true --widthtype request --transparent true --alpha 255 --edge top --align right &
 
-# dwmblocks
-dwmblocks &
-
 # Hide mouse when typing
 xbanish &
 
 # wifi
-nm-applet &
+# nm-applet &
 
 # Systray volume icon
-volumeicon &
+# volumeicon &
+# pasystray &
 
 # Power Management
-xfce4-power-manager &
-
-# zsh config dir
-export ZDOTDIR=$HOME/.config/zsh
+# xfce4-power-manager &
 
 # Some programs like Gparted and etcher usb flashing requires some authentication
 # agent to run at background.
@@ -53,6 +54,20 @@ numlockx &
 
 # Run Compton
 picom --config "$HOME/.config/picom/picom.conf" &
+
+# Run pulseaudio
+# dbus-launch &
+# pulseaudio --start &
+
+# Ssh daemon
+eval "$(ssh-agent -s)"
+
+# gnome-keyring-daemon
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+
+# easyeffects for sound eq and mic settings
+# easyeffects --gapplication-service
 
 # load Xresources
 xrdb ~/.Xresources

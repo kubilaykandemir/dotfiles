@@ -17,10 +17,10 @@ cursor:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: MesloLGS NF
+    # family: MesloLGS NF
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    # family: Hack
+    family: Hack Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
@@ -32,10 +32,10 @@ font:
 
   # The bold font face
   bold:
-    family: MesloLGS NF
+    # family: MesloLGS NF
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    # family: Hack
+    family: Hack Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
@@ -47,10 +47,10 @@ font:
 
   # The italic font face
   italic:
-    family: MesloLGS NF
+    # family: MesloLGS NF
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    # family: Hack
+    family: Hack Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
