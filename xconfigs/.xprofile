@@ -14,7 +14,7 @@ xset r rate 600 25
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="alacritty"
 export BROWSER="firefox"
 
 # XDG Paths
@@ -71,3 +71,4 @@ export SSH_AUTH_SOCK
 
 # load Xresources
 xrdb ~/.Xresources
+

@@ -165,4 +165,4 @@ st.opacity:      255
 st.disable_alpha_correction: 0
 
 Xcursor.theme: Flatbed Cursor original White
-
+Xft.dpi: 96

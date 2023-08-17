@@ -77,4 +77,4 @@ autoload edit-command-line; zle -N edit-command-line
 # VI_MODE_SET_CURSOR=true
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-< ~/scripts/asci/linux.txt
+cat ~/scripts/asci/linux.txt

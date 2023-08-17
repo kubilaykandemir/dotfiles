@@ -1,14 +1,14 @@
 import:
   - ~/.config/alacritty/dracula.yml
 
-env:
+# env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
+  # TERM: xterm-256color
 
 cursor:
   style:
@@ -17,10 +17,11 @@ cursor:
 font:
   # The normal (roman) font face to use.
   normal:
-    # family: MesloLGS NF
+    # family: MesloLGL Nerd Font
+    family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
@@ -32,10 +33,11 @@ font:
 
   # The bold font face
   bold:
-    # family: MesloLGS NF
+    # family: MesloLGL Nerd Font
+    family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
@@ -47,10 +49,11 @@ font:
 
   # The italic font face
   italic:
-    # family: MesloLGS NF
+    # family: MesloLGL Nerd Font
+    family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
