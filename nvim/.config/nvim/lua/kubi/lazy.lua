@@ -58,6 +58,7 @@ require("lazy").setup({
     build = ':TSUpdate',
   },
   "nvim-treesitter/playground",
+  "nvim-treesitter/nvim-treesitter-context",
   "mbbill/undotree",
 
   -- Git related plugins
@@ -100,6 +101,7 @@ require("lazy").setup({
       { 'L3MON4D3/LuaSnip' },     -- Required
     }
   },
+  "simrat39/rust-tools.nvim",
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
