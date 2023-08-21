@@ -20,5 +20,9 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move highlighted text dow
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move highlighted text up" })
 
 -- For Os clipboard Leader Y and For Nvim clipboard Leader y
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Nvim Clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "OS Clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "OS Clipboard" })
+
+vim.keymap.set("n", "<leader>s", "<leader>s", { desc = "[T]elescope Search "})
+vim.keymap.set("n", "<leader>h", "<leader>h", { desc = "[H]arpoon" })
+vim.keymap.set("n", "<leader>c", "<leader>c", { desc = "Lsp [C]ode Action" })

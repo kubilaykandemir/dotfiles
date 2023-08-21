@@ -1,4 +1,7 @@
-local lsp = require('lsp-zero').preset({ "recommended" })
+local lsp = require('lsp-zero')
+lsp.preset("recommended")
+
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
@@ -6,15 +9,22 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.ensure_installed({
   'tsserver',
   'eslint',
   'rust_analyzer',
-  'lua_ls'
+  'lua_ls',
+  'tailwindcss',
+  'emmet_ls',
+  'html',
 })
+
+-- Fix Undefined global 'vim'
+lsp.nvim_workspace()
+
+-- (Optional) Configure lua language server for neovim
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -47,7 +57,7 @@ lsp.on_attach(function(client, bufnr) -- primeagen code
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-  nmap('<leader>lf', vim.lsp.buf.format, '[L]sp [F]ormat Current Buffer')
+  nmap('<leader>f', vim.lsp.buf.format, 'Lsp [F]ormat Current Buffer')
 
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
