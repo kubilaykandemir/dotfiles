@@ -12,10 +12,11 @@ export PATH=$HOME/.local/bin/fnm:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.miniconda/bin:$PATH
-export npm_config_prefix="$HOME/.local/.node_modules"
+# export npm_config_prefix="$HOME/.local/.node_modules"
 export PATH="$HOME/.local/.node_modules/bin:$PATH"
 export DENO_INSTALL="$HOME/.local/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 eval "$(fnm env)"
 eval "$(zoxide init zsh)"
