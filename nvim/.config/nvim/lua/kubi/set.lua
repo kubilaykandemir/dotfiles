@@ -6,6 +6,8 @@
 vim.g.mapleader = " "
 vim.g.localmapleader = " "
 
+vim.g.catppuccin_flavour = "mocha"
+
 -- Set highlight on search
 vim.o.hlsearch = false
 vim.o.incsearch = true

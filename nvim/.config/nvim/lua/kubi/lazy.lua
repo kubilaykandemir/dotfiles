@@ -91,7 +91,19 @@ require("lazy").setup({
       { 'L3MON4D3/LuaSnip' },     -- Required
     }
   },
+  'saadparwaiz1/cmp_luasnip',
+  -- Adds LSP completion capabilities
+  'hrsh7th/cmp-nvim-lsp',
+
+  -- Adds a number of user-friendly snippets
+  'rafamadriz/friendly-snippets',
+
   "simrat39/rust-tools.nvim",
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },

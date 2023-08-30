@@ -68,7 +68,6 @@ bindkey -r "^d"
 [ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
 [ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-# export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 compinit
 
 # Edit line in vim with ctrl-e:
