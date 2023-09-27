@@ -15,7 +15,7 @@ return {
 
     local util = require 'lspconfig.util'
 
-    local on_attach = function(_, bufnr)
+    local on_attach = function(client, bufnr)
       local nmap = function(keys, func, desc)
         if desc then
           desc = 'LSP: ' .. desc
