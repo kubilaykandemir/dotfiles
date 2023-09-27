@@ -1,0 +1,30 @@
+#
+# Toolkit Backend Variables 
+#
+# GTK: Use wayland if available, fall back to x11 if not.
+exec export=GDK_BACKEND="wayland,x11"
+
+# Run SDL2 applications on Wayland. Remove or set to x11 if games that provide older versions of SDL cause compatibility issues
+exec export=SDL_VIDEODRIVER="wayland"
+
+# Clutter package already has wayland enabled, this variable will force Clutter applications to try and use the Wayland backend
+exec export CLUTTER_BACKEND="wayland"
+#
+# XDG specific environment variables are often detected through portals and applications that may set those for you, however it is not a bad idea to set them explicitly.
+#
+exec export=XDG_CURRENT_DESKTOP="Sway"
+exec export=XDG_SESSION_TYPE="Sway"
+exec export=XDG_SESSION_DESKTOP="Sway"
+#
+# QT variables
+#
+# Tell QT applications to use the Wayland backend, and fall back to x11 if Wayland is unavailable
+exec export QT_AUTO_SCREEN_SCALE_FACTOR="1"
+
+exec export QT_QPA_PLATFORM="wayland;xcb" 
+
+# Disables window decorations on QT applications
+exec export=QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+
+# Tells QT based applications to pick your theme from qt5ct, use with Kvantum.
+exec export=QT_QPA_PLATFORMTHEME="qt5ct"

@@ -27,7 +27,7 @@
 
 #mode, #clock, #memory, #temperature, #cpu, #mpd,
 #idle_inhibitor, #backlight, #pulseaudio, #network, 
-#battery, #tray, #disk, window#waybar #window {
+#battery, #tray, #disk, window#waybar #window, #custom-notification{
   padding-left: .6rem;
   padding-right: .6rem;
 }
@@ -91,6 +91,10 @@ window#waybar.solo {
 }
 
 #workspaces button.active {
+    color: @blue;
+}
+
+#workspaces button.focused {
     color: @blue;
 }
 

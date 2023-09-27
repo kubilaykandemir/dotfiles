@@ -10,11 +10,11 @@
 
   input type:keyboard xkb_numlock enabled
 
-  input type:mouse {
+  input type:pointer {
 #    left_handed enabled
     tap enabled
-    natural_scroll enabled
+    natural_scroll disabled
     dwt enabled
     accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
-#    pointer_accel 0.5 # set mouse sensitivity (between -1 and 1)
+    pointer_accel 0 # set mouse sensitivity (between -1 and 1)
 }

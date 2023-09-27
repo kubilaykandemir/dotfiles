@@ -1,1 +1,2 @@
-require("kubi")
+require("kubi.core")
+require("kubi.lazy")

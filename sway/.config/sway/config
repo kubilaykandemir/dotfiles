@@ -8,9 +8,10 @@
 #########################
 # Run services
 #########################
-exec mako
+# exec mako
 exec wl-paste -t text --watch clipman store --no-persist
 exec ~/.config/sway/scripts/autostart.sh
+exec swaync
 #
 ### Variables
 #
@@ -104,6 +105,9 @@ set $lockscreenbg ~/.config/sway/images/lockscreen_background.jpg
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+backspace exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Notificiation
+    bindsym $mod+Shift+n exec swaync-client -t -sw
 
 #
 # Status Bar:
