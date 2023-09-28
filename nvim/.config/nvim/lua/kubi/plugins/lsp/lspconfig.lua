@@ -75,6 +75,25 @@ return {
       on_attach = on_attach,
     })
 
+    lspconfig.eslint.setup({
+      filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx",
+        "vue", "svelte", "astro" },
+      cmd = { "vscode-eslint-language-server", "--stdio" },
+      root_dir = util.root_pattern(
+        'node-modules',
+        'package.json',
+        'tsconfig.json',
+        '.eslintrc.json',
+        '.git'
+      ),
+      on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          command = "EslintFixAll",
+        })
+      end,
+    })
+
     -- configure css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,
