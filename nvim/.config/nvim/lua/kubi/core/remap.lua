@@ -29,3 +29,9 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "OS Clipboard" })
 vim.keymap.set("n", "<leader>s", "<leader>s", { desc = "[T]elescope Search "})
 vim.keymap.set("n", "<leader>h", "<leader>h", { desc = "[H]arpoon" })
 vim.keymap.set("n", "<leader>c", "<leader>c", { desc = "Lsp [C]ode Action" })
+
+
+vim.keymap.set("n", "]b", "<cmd>bnext<CR>", { desc = "Buffer Next"})
+vim.keymap.set("n", "[b", "<cmd>bpre<CR>", { desc = "Buffer Previous" })
+vim.keymap.set("n", "]B", "<cmd>blast<CR>", { desc = "Buffer Last"})
+vim.keymap.set("n", "[B", "<cmd>bfirst<CR>", { desc = "Buffer First" })
