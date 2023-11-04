@@ -61,7 +61,7 @@ vim.wo.so = 8
 vim.opt.colorcolumn = "80"
 
 -- Vim file explorer settings
-vim.g.netrw_keepdir = 0
+-- vim.g.netrw_keepdir = 0
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 30

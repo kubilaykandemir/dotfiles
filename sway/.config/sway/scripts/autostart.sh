@@ -17,3 +17,5 @@ export SSH_AUTH_SOCK
 
 # load Xresources
 xrdb -load ~/.Xresources
+
+/usr/bin/gammastep-indicator -l ${RS_LAT}:${RS_LON} -m wayland -t ${RS_DAY}:${RS_NIGHT}
